@@ -42,7 +42,7 @@ function autoClicker(){
     if (count >= price2){
         count = count - price2;
         price2 = price2*3;
-        time2 = time2 / 1.5;
+        time2 = time2 / 2;
         document.getElementById("counter").innerHTML = "$ " + count;
         document.getElementById("autoClickerButton").value = "Auto Clicker $"+price2;
         window.setInterval(counterIncrement, time2);
