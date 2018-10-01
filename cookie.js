@@ -1,6 +1,9 @@
 /*OPEN AND CLOSE OVERLAY*/
 function openNav() {
     document.getElementById("shopMenu").style.width = "100%";
+    /*  INITIALISE PRICES*/
+    document.getElementById("autoClickerButton").value = "$"+price2;
+    document.getElementById("doubleClickButton").value = "$"+price1;
 }
 
 function closeNav() {
@@ -33,17 +36,15 @@ function extraClick() {
     }
 }
 
-var price2 = 5;
-var toggleAutoClick = 0;
+var price2 = 200;
 function autoClicker(){
     if (count >= price2){
         count = count - price2;
-        toggleAutoClick = 1;
+        document.getElementById("counter").innerHTML = "$ " + count;
+        document.getElementById("autoClickerButton").value = "$"+price2;
+        window.setInterval(counterIncrement, 1000);
     }
     else {
         alert("Not enough $");
     }
-}
-while (toggleAutoClick>0){
-    setInterval(counterIncrement, 1000);
 }
