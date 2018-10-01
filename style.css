@@ -62,11 +62,10 @@
     margin:25px;
     cursor: pointer;
     height: 10vh;
-    width: 10vh;
+    width: auto;
 }
 /*SHOP BUTTON*/
 .shopButton {
-    height: 0.1vh;
     position: absolute;
     cursor: pointer;
     font-size:50px;

@@ -2,8 +2,8 @@
 function openNav() {
     document.getElementById("shopMenu").style.width = "100%";
     /*  INITIALISE PRICES*/
-    document.getElementById("autoClickerButton").value = "$"+price2;
-    document.getElementById("doubleClickButton").value = "$"+price1;
+    document.getElementById("autoClickerButton").value = "Auto Clicker $"+price2;
+    document.getElementById("doubleClickButton").value = "Extra Click $"+price1;
 }
 
 function closeNav() {
@@ -29,20 +29,23 @@ function extraClick() {
         price1 = price1*2;
         document.getElementById("counter").innerHTML = "$ " + count;
         document.getElementById("multiplier").innerHTML = "x"+multiplier;
-        document.getElementById("doubleClickButton").value = "$"+price1;
+        document.getElementById("doubleClickButton").value = "Extra Click $"+price1;
     }
     else {
         alert("Not enough $");
     }
 }
 
-var price2 = 200;
+var price2 = 5;
+var time2 = 2000;
 function autoClicker(){
     if (count >= price2){
         count = count - price2;
+        price2 = price2*3;
+        time2 = time2 / 1.5;
         document.getElementById("counter").innerHTML = "$ " + count;
-        document.getElementById("autoClickerButton").value = "$"+price2;
-        window.setInterval(counterIncrement, 1000);
+        document.getElementById("autoClickerButton").value = "Auto Clicker $"+price2;
+        window.setInterval(counterIncrement, time2);
     }
     else {
         alert("Not enough $");
