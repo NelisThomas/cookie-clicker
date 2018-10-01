@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="cookie.js"></script>
     <title>Cookie Clicker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -11,13 +11,16 @@
     <div id="shopMenu" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-            <input class="shopItem" type="button" id="doubleClickButton" onclick="extraClick()">
-            <div class="shopItem">2</div>
-            <div class="shopItem">3</div>
-            <div class="shopItem">4</div>
-            <div class="shopItem">5</div>
-            <div class="shopItem">6</div>
-            <div class="shopItem">7</div>
+            <div class="shopRow">
+                <input class="shopItem" type="button" id="doubleClickButton" onclick="extraClick()">
+                <input class="shopItem" type="button" id="autoClickerButton" onclick="autoClicker()">
+                <div class="shopItem">3</div>
+            </div>
+            <div class="shopRow">
+                <div class="shopItem">4</div>
+                <div class="shopItem">5</div>
+                <div class="shopItem">6</div>
+            </div>
         </div>
     </div>
     <span class="shopButton" onclick="openNav()">$</span>
@@ -27,6 +30,8 @@
         <div class="currency-display">
             <h2>Counter</h2>
             <p id="counter">$ 0</p>
+            <h2>Multiplier</h2>
+            <p id="multiplier">x1</p>
         </div>
     </div>
 </body>
