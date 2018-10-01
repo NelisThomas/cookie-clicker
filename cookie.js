@@ -44,6 +44,6 @@ function autoClicker(){
         alert("Not enough $");
     }
 }
-while (toggleAutoClick=1){
+while (toggleAutoClick>0){
     setInterval(counterIncrement, 1000);
 }
