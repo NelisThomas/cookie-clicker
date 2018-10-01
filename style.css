@@ -88,9 +88,13 @@ body{
     display: inline-block;
     height:250px;
     width:250px;
+    
+}
+.center-button p{
     color: white;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 315%;
+    margin-top: 40%;
 }
 .shopRow{
     display: flex;
