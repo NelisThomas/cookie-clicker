@@ -1,3 +1,11 @@
+/*BODY */
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
 
 /*OVERLAY*/
 .overlay {
@@ -66,19 +74,23 @@
 }
 /*SHOP BUTTON*/
 .shopButton {
-    position: absolute;
+    margin-right: 85%;
     cursor: pointer;
     font-size:50px;
+    z-index: 300;
 }
 /*MAIN CLICKER BUTTON*/
 .center-button {
-    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    background-color:gold;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    background-color:#c20a0a;
     cursor: pointer;
     display: inline-block;
-    height:300px;
-    width:300px;
+    height:250px;
+    width:250px;
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
 }
 .shopRow{
     display: flex;

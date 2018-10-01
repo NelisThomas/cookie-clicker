@@ -36,7 +36,7 @@ function extraClick() {
     }
 }
 
-var price2 = 5;
+var price2 = 200;
 var time2 = 2000;
 function autoClicker(){
     if (count >= price2){
