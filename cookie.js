@@ -9,6 +9,21 @@ function openNav() {
 function closeNav() {
     document.getElementById("shopMenu").style.width = "0%";
 }
+/*TOGGLE NIGHT MODE*/
+var night = 0;
+function toggleNightMode(){
+    
+    if (night == 0){
+        document.getElementById("body").style.color="white";
+        document.getElementById("body").style.backgroundColor="black";
+        night = 1;
+    } 
+    else  if(night == 1){
+        document.getElementById("body").style.color="black";
+        document.getElementById("body").style.backgroundColor="white";
+        night=0;
+    }
+}
 /*DECLARING VARIABLES*/
 var count = 0;
 var multiplier = 1;
@@ -30,6 +45,7 @@ function extraClick() {
         document.getElementById("counter").innerHTML = "$ " + count;
         document.getElementById("multiplier").innerHTML = "x"+multiplier;
         document.getElementById("doubleClickButton").value = "Extra Click $"+price1;
+        document.getElementById("shopMenu").style.width = "0%";
     }
     else {
         alert("Not enough $");
@@ -46,6 +62,7 @@ function autoClicker(){
         document.getElementById("counter").innerHTML = "$ " + count;
         document.getElementById("autoClickerButton").value = "Auto Clicker $"+price2;
         window.setInterval(counterIncrement, time2);
+        document.getElementById("shopMenu").style.width = "0%";
     }
     else {
         alert("Not enough $");
